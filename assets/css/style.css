@@ -673,22 +673,24 @@ p {
 .header-navbar {
   position: relative;
   display: grid;
-  align-self: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   justify-items: end;
 }
 
 .header-navbar__hamburger {
   display: none;
   width: 30px;
-  height: 22px;
+  height: 23px;
   position: relative;
   margin: 20px 0;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
 }
 
@@ -799,12 +801,12 @@ p {
 
 .header-navbar__item a:hover,
 .header-navbar__item a:focus {
-    color: #d66926;
+  color: #d66926;
 }
 
 
 .header-content {
-  z-index: 1;
+  position: relative;
 }
 
 .header-title {
@@ -1321,7 +1323,6 @@ p {
   .header-buttons .btn {
     min-width: 170px;
     height: 40px;
-    margin-bottom: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
     letter-spacing: 0.05em;
@@ -1367,10 +1368,7 @@ p {
     grid-column: 1;
     grid-row: 4 / span 2;
   }
-  .section {
-    padding-top: 60px;
-    padding-bottom: 40px;
-  }
+  
   .about-content h2 {
     margin-bottom: 30px;
   }
@@ -1404,9 +1402,12 @@ p {
     margin: 0;
   }
   .skills {
-    padding: 10px;
-    grid-gap: 10px;
+    padding: 20px;
+    grid-gap: 20px;
     grid-template-columns: 1fr;
+  }
+   .skills .btn-set {
+        padding: 0;
   }
   .about .container {
     grid-gap: 20px;
